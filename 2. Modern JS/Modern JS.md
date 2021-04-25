@@ -65,3 +65,18 @@ console.log(funHike)//{name:"탈락",elevation:9738}
 
 ## 스프레드 연산자
 스프레드 연산자는 원본을 수정하지 않는다(Array.reverse와 같이 원본을 수정하는 연산자와 다름)
+
+## promise
+비동기 연산 처리를 위한 객체
+```javascript
+const promise1 = new Promise((resolve, reject)=>{
+  setTimeout(()=>{
+    resolve('foo')//resolve의 인자는 then 절의 콜백함수로 들어갑니다.
+    },300
+  )
+})
+
+promise1.then((value)=>{
+  console.log(value)//"foo"
+})
+```
