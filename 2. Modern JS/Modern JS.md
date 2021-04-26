@@ -80,3 +80,25 @@ promise1.then((value)=>{
   console.log(value)//"foo"
 })
 ```
+
+## 모듈
+ES6에서 도입된 모듈을 통해 라이브러리나 외부의 자바스크립트 코드를 편하게 사용할 수 있다.
+```javascript
+export const print(message)=>log(message,new Date())
+
+export const log(message,timestamp)=> console.log(`${timestamp.toString()}: ${message}`)
+```
+위의 코드는 두 함수를 외부에 공개한다.
+
+하나의 이름만 외부에 공개할 때에는 `export default` 를 사용한다.  
+`export default`를 통해 내보낸 모듈은 구조분해 없이 사용할 수 있고, 그렇지 않은 모듈은 구조분해를 이용하여 사용할 수 있다.  
+`import *`를 통해 외부의 이름을 모두 로컬 이름 공간 안에 가져올 수 있다.
+
+## CommonJS
+모든 버전의 노드에서 사용할 수 있는 일반적인 모듈 패턴이다.  
+커먼JS에서는 export를 사용할 때에 다음과 같이 사용할 수 있다.
+```javascript
+module.exports = {your,name,goes,here}
+//import 는 다음과 같이 사용할 수 있다.
+const {your,name,goes,here} = require("./file_name_goes_here");
+```
