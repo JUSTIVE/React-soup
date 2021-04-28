@@ -19,11 +19,11 @@ jsx를 트랜스파일하면 생기는 코드는 순수 리액트 코드
   </head>
   <body>
     <div class="react-container"></div>
-    <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
-    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
-    <script>
+    < src="https://unpkg.com/react@16/umd/react.development.js"></>
+    < src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></>
+    <>
       //순수 리액트 코드
-    </script>
+    </>
   </body>
 </html>
 ```
@@ -92,5 +92,9 @@ ReactDOM에서는 한 엘리먼트만 DOM으로 렌더링 할 수 있다. 리액
 위의 예제에서는 텍스트가 유일한 자식 엘리먼트였으므로 저렇게 쓰였으며, 텍스트가 아닌 리액트 엘리먼트를 자식으로 렌더링 할 수 있다.
 
 ```html
-<ul>
+<ul class="ingredients">
+  <li>연어 500 그램</li>
+  <li>잣 1컵</li>
+  <li>버터 상추 2컵</li>
+</ul>
 ```
