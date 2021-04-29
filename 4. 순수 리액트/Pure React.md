@@ -98,3 +98,14 @@ ReactDOM에서는 한 엘리먼트만 DOM으로 렌더링 할 수 있다. 리액
   <li>버터 상추 2컵</li>
 </ul>
 ```
+
+이는 리액트 엘리먼트로 다음과 같이 표현할 수 있다.
+```javascript
+React.createElement(
+  "ul",
+  null,
+  React.createElement("li",null,"연어 500 그램")
+  React.createElement("li",null,"잣 1컵")
+  React.createElement("li",null,"버터 상추 2컵")
+)
+```
